@@ -1,4 +1,4 @@
-module style
+module github.com/rmadar/hplot-style
 
 go 1.14
 
