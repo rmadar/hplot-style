@@ -1,4 +1,4 @@
-module hplotstyle
+module style
 
 go 1.14
 
