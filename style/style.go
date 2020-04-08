@@ -9,7 +9,7 @@ import (
 	"go-hep.org/x/hep/hplot"
 )
 
-var defaultBlack color.NRGBA = color.NRGBA{R: 30, G: 30, B: 30, A: 255}
+var defaultBlack = color.NRGBA{R: 30, G: 30, B: 30, A: 255}
 
 // Apply nice style for the plot
 func ApplyToPlot(p *hplot.Plot){
