@@ -9,7 +9,7 @@ import (
 	"go-hep.org/x/hep/hplot"
 )
 
-var defaultBlack = color.NRGBA{R: 30, G: 30, B: 30, A: 255}
+var defaultBlack = color.NRGBA{R: 35, G: 55, B: 57, A: 255}
 
 // Apply nice style for the plot
 func ApplyToPlot(p *hplot.Plot){
@@ -58,6 +58,7 @@ func ApplyToPlot(p *hplot.Plot){
 	// Specify text style of the legend
 	p.Legend.TextStyle.Font.Size = 14
 	p.Legend.TextStyle.Color = defaultBlack
+	p.Legend.Padding = 0.1 * vg.Inch
 }
 
 // Apply nominal style for histogram representing data
@@ -70,13 +71,15 @@ func ApplyToDataHist(hData *hplot.H1D){
 	hData.LineStyle.Width = 0
 
 	// Y error bars
-	hData.YErrs.LineStyle.Color = color.NRGBA{R: 10, G: 10, B: 10, A: 255}
-	hData.YErrs.LineStyle.Width = 2.5
-	hData.YErrs.CapWidth = 7
-
+	if hData.YErrs != nil {
+		hData.YErrs.LineStyle.Color = color.NRGBA{R: 10, G: 10, B: 10, A: 255}
+		hData.YErrs.LineStyle.Width = 2.5
+		hData.YErrs.CapWidth = 7
+	}
+	
 	// Dots as marker
 	hData.GlyphStyle = draw.GlyphStyle{
 		Shape:  draw.CircleGlyph{},
-		Color:  color.NRGBA{R: 10, G: 10, B: 10, A: 255},
+		Color: color.NRGBA{R: 10, G: 10, B: 10, A: 255},
 		Radius: vg.Points(3)}
 }
