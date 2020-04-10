@@ -36,6 +36,8 @@ func ApplyToPlot(p *hplot.Plot){
 	p.Y.Label.Padding = 5
 	p.X.Label.TextStyle.Font.Size = 14
 	p.Y.Label.TextStyle.Font.Size = 14
+	p.X.Label.Position = draw.PosRight
+	p.Y.Label.Position = draw.PosTop
 	p.X.Label.TextStyle.Color = SmoothBlack
 	p.Y.Label.TextStyle.Color = SmoothBlack
 
