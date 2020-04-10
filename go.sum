@@ -93,6 +93,8 @@ go-hep.org/x/hep v0.25.0 h1:63oAIBX1pbrcopPPimSUezlUB8WmfKeCJgJ3zCkVX5s=
 go-hep.org/x/hep v0.25.0/go.mod h1:1kBwYtGGxaYCYbfiltEcZB2LV8+53E3xLbWT83PiHXA=
 go-hep.org/x/hep v0.25.1-0.20200408105008-04dc20661541 h1:r7HLUBEo88PZmEtBW3Zn8Fqckp8JgPg1wg3A4wiw3Qc=
 go-hep.org/x/hep v0.25.1-0.20200408105008-04dc20661541/go.mod h1:bB8/qKT5FTwGsz+9zlBYOQqxxeoGQL8ylN+eQNrywno=
+go-hep.org/x/hep v0.25.1-0.20200410130731-18bdac6b524d h1:ihlNe1PoLAlRw1b/ySobNT3aKLMAdvCbojm748ybIgE=
+go-hep.org/x/hep v0.25.1-0.20200410130731-18bdac6b524d/go.mod h1:PvO5VKAc/kRDPGrAj7yXvk/zq7cSZnSp691rqOVLerA=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20190510104115-cbcb75029529/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
 golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
@@ -183,6 +185,8 @@ gonum.org/v1/plot v0.7.1-0.20200406222744-04fc25f75daf h1:qVQpnE7pQUIjzwzpJnanNa
 gonum.org/v1/plot v0.7.1-0.20200406222744-04fc25f75daf/go.mod h1:2wtU6YrrdQAhAF9+MTd5tOQjrov/zF70b1i99Npjvgo=
 gonum.org/v1/plot v0.7.1-0.20200409074754-e32acf92b684 h1:fVxv5xJhtate6jV7CRNMFNopvWJ9fPvuLOVZYyn5L9Y=
 gonum.org/v1/plot v0.7.1-0.20200409074754-e32acf92b684/go.mod h1:2wtU6YrrdQAhAF9+MTd5tOQjrov/zF70b1i99Npjvgo=
+gonum.org/v1/plot v0.7.1-0.20200409110503-eddda93a2277 h1:Dd9muKz0CB4Y1RtjvDswHoU7l6isWebv2L+V01imnZ4=
+gonum.org/v1/plot v0.7.1-0.20200409110503-eddda93a2277/go.mod h1:2wtU6YrrdQAhAF9+MTd5tOQjrov/zF70b1i99Npjvgo=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/jcmturner/aescts.v1 v1.0.1/go.mod h1:nsR8qBOg+OucoIW+WMhB3GspUQXq9XorLnQb9XtvcOo=
 gopkg.in/jcmturner/dnsutils.v1 v1.0.1/go.mod h1:m3v+5svpVOhtFAP/wSz+yzh4Mc0Fg7eRhxkJMWSIz9Q=
