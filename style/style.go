@@ -77,6 +77,13 @@ func ApplyToPlot(p *hplot.Plot){
 	p.Legend.Padding = 0.1 * vg.Inch
 }
 
+func ApplyToBottomPlot(p *hplot.Plot){
+	ApplyToPlot(p)
+	
+	p.Y.Tick.Marker = hplot.Ticks{N: 3}
+	p.Y.Tick.Label.Font.Size = 10
+}
+
 // Apply cirle markers
 func SetCircleMarkersTo(h *hplot.H1D){
 
