@@ -3,7 +3,7 @@ module github.com/rmadar/hplot-style
 go 1.14
 
 require (
-	go-hep.org/x/hep v0.25.1-0.20200414101223-4d38793dec10
+	go-hep.org/x/hep v0.26.1-0.20200417210631-420d16dfb83e
 	golang.org/x/exp v0.0.0-20200331195152-e8c3332aa8e5
 	golang.org/x/mobile v0.0.0-20200329125638-4c31acba0007 // indirect
 	gonum.org/v1/gonum v0.7.1-0.20200330111830-e98ce15ff236
