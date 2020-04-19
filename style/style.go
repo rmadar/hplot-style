@@ -15,7 +15,7 @@ var (
 )
 
 // Apply nice options to Figure (currently type hplot.P)
-func ApplyToFigure(p *hplot.P, compileLatex bool) {
+func ApplyToFigure(p *hplot.P, latex htex.Handler) {
 
 	// Plot borders
 	p.Border.Right = 15
@@ -23,10 +23,8 @@ func ApplyToFigure(p *hplot.P, compileLatex bool) {
 	p.Border.Top = 10
 	p.Border.Bottom = 5
 
-	// Enable automatic LaTex Compilation
-	if compileLatex {
-		p.Latex = htex.DefaultHandler
-	}
+	// LaTex compilation setup
+	p.Latex = latex
 }
 
 // Apply nice style for the plot
