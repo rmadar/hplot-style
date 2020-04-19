@@ -101,6 +101,8 @@ go-hep.org/x/hep v0.25.1-0.20200414101223-4d38793dec10/go.mod h1:q+pS+gYvnzQn1xT
 go-hep.org/x/hep v0.26.0 h1:52G8O8gXe9RggZxLabU4rO5Mfr1MQo7TdYFjXfmyA5o=
 go-hep.org/x/hep v0.26.1-0.20200417210631-420d16dfb83e h1:lWpsgCHPFqmPBh9IEqGd8/29tND4JYXCQz4w3yb6XcA=
 go-hep.org/x/hep v0.26.1-0.20200417210631-420d16dfb83e/go.mod h1:qe/aUgzSt+ADFnvRwilXExDjZnQ8LqxhDkTD3fp1g6Y=
+go-hep.org/x/hep v0.26.1-0.20200419200150-ff7f4a3fee2e h1:MfbbJV9DwkPCthtB4aShzzlxJ1J9JrzKyo/MIpDqNn0=
+go-hep.org/x/hep v0.26.1-0.20200419200150-ff7f4a3fee2e/go.mod h1:qe/aUgzSt+ADFnvRwilXExDjZnQ8LqxhDkTD3fp1g6Y=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20190510104115-cbcb75029529/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
 golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=

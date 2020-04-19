@@ -7,24 +7,20 @@ import (
 	"gonum.org/v1/plot/vg/draw"
 
 	"go-hep.org/x/hep/hplot"
-	"go-hep.org/x/hep/hplot/htex"
 )
 
 var (
 	SmoothBlack = color.NRGBA{R: 35, G: 55, B: 57, A: 255}
 )
 
-// Apply nice options to Figure (currently type hplot.P)
-func ApplyToFigure(p *hplot.P, latex htex.Handler) {
+// Apply nice options to Figure
+func ApplyToFigure(fig *hplot.Fig) {
 
 	// Plot borders
-	p.Border.Right = 15
-	p.Border.Left = 5
-	p.Border.Top = 10
-	p.Border.Bottom = 5
-
-	// LaTex compilation setup
-	p.Latex = latex
+	fig.Border.Right = 15
+	fig.Border.Left = 5
+	fig.Border.Top = 10
+	fig.Border.Bottom = 5
 }
 
 // Apply nice style for the plot
