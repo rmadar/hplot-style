@@ -79,7 +79,7 @@ func ApplyToBottomPlot(p *hplot.Plot){
 }
 
 // Apply cirle markers
-func SetCircleMarkersTo(h *hplot.H1D){
+func SetCircleMarkersToHist(h *hplot.H1D){
 
 	// Dots as marker
 	h.GlyphStyle = draw.GlyphStyle{
@@ -95,6 +95,23 @@ func SetCircleMarkersTo(h *hplot.H1D){
 	}
 }
 
+// Apply cirle markers
+func SetCircleMarkersToScatter(s *hplot.S2D){
+
+	// Dots as marker
+	s.GlyphStyle = draw.GlyphStyle{
+		Shape: draw.CircleGlyph{},
+		Color: SmoothBlack,
+		Radius: vg.Points(3)}
+
+	// Y error bars
+	//if s.YErrs != nil {
+	//	s.YErrs.LineStyle.Color = SmoothBlack
+	//	s.YErrs.LineStyle.Width = 2.5
+	//	s.YErrs.CapWidth = 7
+	//}
+}
+
 // Apply nominal style for histogram representing data
 func ApplyToDataHist(hData *hplot.H1D){
 
@@ -105,6 +122,17 @@ func ApplyToDataHist(hData *hplot.H1D){
 	hData.LineStyle.Width = 0
 	
 	// Apply circles as marker
-	SetCircleMarkersTo(hData)
+	SetCircleMarkersToHist(hData)
+	
+}
+
+// Apply nominal style for scatter2D representing data
+func ApplyToDataS2D(sData *hplot.S2D){
+	
+	// No line
+	sData.LineStyle.Width = 0
+	
+	// Apply circles as marker // to be written for scatter2D
+	SetCircleMarkersToScatter(sData)
 
 }
