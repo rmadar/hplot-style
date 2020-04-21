@@ -24,7 +24,7 @@ func ApplyToFigure(fig *hplot.Fig) {
 }
 
 // Apply nice style for the plot
-func ApplyToPlot(p *hplot.Plot){
+func ApplyToPlot(p *hplot.Plot) {
 
 	// Specify title style
 	p.Title.TextStyle.Font.Size = 16
@@ -34,7 +34,7 @@ func ApplyToPlot(p *hplot.Plot){
 	// Specify axis ranges and padding (ie distance to (0,0) point
 	p.X.Padding = 5
 	p.Y.Padding = 5
-	
+
 	// Specify axis label & fontsize
 	p.X.Label.Padding = 5
 	p.Y.Label.Padding = 5
@@ -64,27 +64,28 @@ func ApplyToPlot(p *hplot.Plot){
 	// Specify tick position
 	p.X.Tick.Marker = hplot.Ticks{N: 10}
 	p.Y.Tick.Marker = hplot.Ticks{N: 10}
-	
+
 	// Specify text style of the legend
-	p.Legend.TextStyle.Font.Size = 14
+	p.Legend.TextStyle.Font.Size = 12
 	p.Legend.TextStyle.Color = SmoothBlack
 	p.Legend.Padding = 0.1 * vg.Inch
+	p.Legend.ThumbnailWidth = 25
 }
 
-func ApplyToBottomPlot(p *hplot.Plot){
+func ApplyToBottomPlot(p *hplot.Plot) {
 	ApplyToPlot(p)
-	
+
 	p.Y.Tick.Marker = hplot.Ticks{N: 3}
 	p.Y.Tick.Label.Font.Size = 10
 }
 
 // Apply cirle markers
-func SetCircleMarkersToHist(h *hplot.H1D){
+func SetCircleMarkersToHist(h *hplot.H1D) {
 
 	// Dots as marker
 	h.GlyphStyle = draw.GlyphStyle{
-		Shape: draw.CircleGlyph{},
-		Color: SmoothBlack,
+		Shape:  draw.CircleGlyph{},
+		Color:  SmoothBlack,
 		Radius: vg.Points(3)}
 
 	// Y error bars
@@ -96,12 +97,12 @@ func SetCircleMarkersToHist(h *hplot.H1D){
 }
 
 // Apply cirle markers
-func SetCircleMarkersToScatter(s *hplot.S2D){
+func SetCircleMarkersToScatter(s *hplot.S2D) {
 
 	// Dots as marker
 	s.GlyphStyle = draw.GlyphStyle{
-		Shape: draw.CircleGlyph{},
-		Color: SmoothBlack,
+		Shape:  draw.CircleGlyph{},
+		Color:  SmoothBlack,
 		Radius: vg.Points(3)}
 
 	// Y error bars
@@ -113,25 +114,25 @@ func SetCircleMarkersToScatter(s *hplot.S2D){
 }
 
 // Apply nominal style for histogram representing data
-func ApplyToDataHist(hData *hplot.H1D){
+func ApplyToDataHist(hData *hplot.H1D) {
 
 	// Remove basic stat info
 	hData.Infos.Style = hplot.HInfoNone
-	
+
 	// No line
 	hData.LineStyle.Width = 0
-	
+
 	// Apply circles as marker
 	SetCircleMarkersToHist(hData)
-	
+
 }
 
 // Apply nominal style for scatter2D representing data
-func ApplyToDataS2D(sData *hplot.S2D){
-	
+func ApplyToDataS2D(sData *hplot.S2D) {
+
 	// No line
 	sData.LineStyle.Width = 0
-	
+
 	// Apply circles as marker // to be written for scatter2D
 	SetCircleMarkersToScatter(sData)
 
