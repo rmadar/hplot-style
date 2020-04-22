@@ -23,7 +23,7 @@ func ApplyToFigure(fig *hplot.Fig) {
 	fig.Border.Bottom = 5
 
 	// DPI for png
-	fit.DPI = 300
+	fig.DPI = 300
 }
 
 // Apply nice style for the plot
