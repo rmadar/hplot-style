@@ -76,8 +76,7 @@ func ApplyToPlot(p *hplot.Plot) {
 }
 
 func ApplyToBottomPlot(p *hplot.Plot) {
-	ApplyToPlot(p)
-
+	ApplyToPlot(p)	
 	p.Y.Tick.Marker = hplot.Ticks{N: 3}
 	p.Y.Tick.Label.Font.Size = 10
 }
@@ -109,11 +108,13 @@ func SetCircleMarkersToScatter(s *hplot.S2D) {
 		Radius: vg.Points(3)}
 
 	// Y error bars
-	//if s.YErrs != nil {
-	//	s.YErrs.LineStyle.Color = SmoothBlack
-	//	s.YErrs.LineStyle.Width = 2.5
-	//	s.YErrs.CapWidth = 7
-	//}
+	/*
+	if s.ybars != nil {
+		s.ybars.LineStyle.Color = SmoothBlack
+		s.ybars.LineStyle.Width = 2.5
+		s.ybars.CapWidth = 7
+	}*/
+
 }
 
 // Apply nominal style for histogram representing data
@@ -139,4 +140,9 @@ func ApplyToDataS2D(sData *hplot.S2D) {
 	// Apply circles as marker // to be written for scatter2D
 	SetCircleMarkersToScatter(sData)
 
+}
+
+// Helper function to change color opacity
+func ChangeOpacity(c color.NRGBA, alpha uint8) color.NRGBA {
+	return color.NRGBA{R: c.R, G: c.G, B: c.B, A: alpha}
 }
