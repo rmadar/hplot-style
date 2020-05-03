@@ -1,14 +1,14 @@
 package style_test
 
 import (
-	"log"
 	"fmt"
-	
-	"gonum.org/v1/gonum/stat/distuv"
+	"log"
+
 	"golang.org/x/exp/rand"
+	"gonum.org/v1/gonum/stat/distuv"
 
 	"gonum.org/v1/plot/vg"
-	
+
 	"go-hep.org/x/hep/hbook"
 	"go-hep.org/x/hep/hplot"
 
@@ -16,7 +16,7 @@ import (
 )
 
 func ExampleSimePlot() {
-	
+
 	// Create a very wide normal distribution
 	dist := distuv.Normal{
 		Mu:    0,
@@ -25,14 +25,14 @@ func ExampleSimePlot() {
 	}
 
 	// Histogram filling
-	h:= hbook.NewH1D(20, -5, 5)
+	h := hbook.NewH1D(20, -5, 5)
 	for i := 0; i < 50000; i++ {
 		v := dist.Rand()
 		h.Fill(v, 1)
 	}
 
 	// Histogram scaling
-	h.Scale(1.0/h.Integral())
+	h.Scale(1.0 / h.Integral())
 
 	// Making the plot
 	p := hplot.New()
@@ -51,4 +51,3 @@ func ExampleSimePlot() {
 	// Output:
 	// Plot saved.
 }
-

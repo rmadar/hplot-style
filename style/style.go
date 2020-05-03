@@ -76,7 +76,7 @@ func ApplyToPlot(p *hplot.Plot) {
 }
 
 func ApplyToBottomPlot(p *hplot.Plot) {
-	ApplyToPlot(p)	
+	ApplyToPlot(p)
 	p.Y.Tick.Marker = hplot.Ticks{N: 3}
 	p.Y.Tick.Label.Font.Size = 10
 }
@@ -108,13 +108,11 @@ func SetCircleMarkersToScatter(s *hplot.S2D) {
 		Radius: vg.Points(3)}
 
 	// Y error bars
-	/*
-	if s.ybars != nil {
-		s.ybars.LineStyle.Color = SmoothBlack
-		s.ybars.LineStyle.Width = 2.5
-		s.ybars.CapWidth = 7
-	}*/
-
+	if s.YErrs != nil {
+		s.YErrs.LineStyle.Color = SmoothBlack
+		s.YErrs.LineStyle.Width = 2.5
+		s.YErrs.CapWidth = 7
+	}
 }
 
 // Apply nominal style for histogram representing data
