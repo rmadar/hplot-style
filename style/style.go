@@ -121,8 +121,11 @@ func ApplyToDataHist(hData *hplot.H1D) {
 	// Remove basic stat info
 	hData.Infos.Style = hplot.HInfoNone
 
-	// No line
+	// Remove line
 	hData.LineStyle.Width = 0
+
+	// Remove fill
+	hData.FillColor = color.NRGBA{}
 
 	// Apply circles as marker
 	SetCircleMarkersToHist(hData)
