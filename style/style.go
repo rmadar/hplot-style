@@ -153,8 +153,7 @@ func CopyStyleH1DtoH1D(dst, src *hplot.H1D) {
 		dst.YErrs.CapWidth = src.YErrs.CapWidth
 	}
 	if src.Band != nil && dst.Band != nil {
-		dst.Band.FillColor = src.Band.FillColor
-		dst.Band.LineStyle = src.Band.LineStyle
+		*dst.Band = *src.Band
 	}
 }
 
@@ -166,8 +165,7 @@ func CopyStyleH1DtoS2D(dst *hplot.S2D, src *hplot.H1D) {
 		dst.YErrs.CapWidth = src.YErrs.CapWidth
 	}
 	if src.Band != nil && dst.Band != nil {
-		dst.Band.FillColor = src.Band.FillColor
-		dst.Band.LineStyle = src.Band.LineStyle
+		*dst.Band = *src.Band
 	}
 }
 
