@@ -143,6 +143,32 @@ func ApplyToDataS2D(sData *hplot.S2D) {
 
 }
 
+// Helper to copy histogram style
+func CopyStyleH1DtoH1D(dst, src *hplot.H1D) {
+	dst.LineStyle = src.LineStyle
+	dst.FillColor = src.FillColor
+	dst.GlyphStyle = src.GlyphStyle
+	if src.YErrs != nil {
+		dst.YErrs.LineStyle = src.YErrs.LineStyle
+		dst.YErrs.CapWidth = src.YErrs.CapWidth
+	}
+	if src.Band != nil {
+		dst.Band = src.Band
+	}
+}
+
+func CopyStyleH1DtoS2D(dst *hplot.S2D, src *hplot.H1D) {
+	dst.LineStyle = src.LineStyle
+	dst.GlyphStyle = src.GlyphStyle
+	if src.YErrs != nil {
+		dst.YErrs.LineStyle = src.YErrs.LineStyle
+		dst.YErrs.CapWidth = src.YErrs.CapWidth
+	}
+	if src.Band != nil {
+		dst.Band = src.Band
+	}
+}
+
 // Helper function to change color opacity
 func ChangeOpacity(c color.NRGBA, alpha uint8) color.NRGBA {
 	return color.NRGBA{R: c.R, G: c.G, B: c.B, A: alpha}
