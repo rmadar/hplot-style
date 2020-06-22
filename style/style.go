@@ -75,10 +75,25 @@ func ApplyToPlot(p *hplot.Plot) {
 	p.Legend.ThumbnailWidth = 25
 }
 
-func ApplyToBottomPlot(p *hplot.Plot) {
-	ApplyToPlot(p)
-	p.Y.Tick.Marker = hplot.Ticks{N: 3}
-	p.Y.Tick.Label.Font.Size = 10
+// Apply a style to a ratio plot, from the top plot
+func ApplyToRatioPlot(rp *hplot.RatioPlot, top *hplot.Plot) {
+
+	// Bottom plot style
+	ApplyToPlot(rp.Bottom)
+	rp.Bottom.Y.Tick.Marker = hplot.Ticks{N: 3}
+	rp.Bottom.Y.Tick.Label.Font.Size = 10
+	rp.Bottom.X = top.X
+
+	// To plot style
+	rp.Top = top
+	rp.Top.X.Tick.Label.Font.Size = 0
+	rp.Top.X.Tick.Label.Color = color.NRGBA{R: 0, G: 0, B: 0, A: 0}
+	rp.Top.X.Tick.LineStyle.Width = 0.5
+	rp.Top.X.Tick.LineStyle.Color = color.NRGBA{R: 120, G: 120, B: 120, A: 255}
+	rp.Top.X.Tick.Length = 5
+	rp.Top.X.LineStyle.Width = 0.8
+	rp.Top.X.LineStyle.Color = color.NRGBA{R: 120, G: 120, B: 120, A: 255}
+	rp.Top.X.Label.Text = ""	
 }
 
 // Apply cirle markers
