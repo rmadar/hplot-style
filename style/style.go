@@ -39,8 +39,6 @@ func ApplyToPlot(p *hplot.Plot) {
 	p.Y.Padding = 5
 
 	// Specify axis label & fontsize
-	p.X.Label.Padding = 5
-	p.Y.Label.Padding = 5
 	p.X.Label.TextStyle.Font.Size = 14
 	p.Y.Label.TextStyle.Font.Size = 14
 	// p.X.Label.Position = draw.PosRight  // doesn't work with LaTeX --> disable for now
@@ -84,6 +82,9 @@ func ApplyToRatioPlot(rp *hplot.RatioPlot, top *hplot.Plot) {
 	rp.Bottom.Y.Tick.Label.Font.Size = 10
 	rp.Bottom.X = top.X
 
+	// Reset the padding of the bottom X axis to 0
+	rp.Bottom.X.Padding = 0
+	
 	// To plot style
 	rp.Top = top
 	rp.Top.X.Tick.Label.Font.Size = 0
@@ -173,6 +174,7 @@ func CopyStyleH1DtoH1D(dst, src *hplot.H1D) {
 	}
 }
 
+// Helper to copy H1D style to S2D style
 func CopyStyleH1DtoS2D(dst *hplot.S2D, src *hplot.H1D) {
 	dst.LineStyle = src.LineStyle
 	dst.GlyphStyle = src.GlyphStyle
